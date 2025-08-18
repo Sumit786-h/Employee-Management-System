@@ -20,10 +20,12 @@ Local Persistence — Data survives page reloads.
 
 📸 Screenshots
 
+
 ![Login Page](image-1.png)
 ![Admin Page](image-2.png)
 ![Admin Page 2](image-3.png)
 ![Employee Dashboard](image.png)
+
 
 
 🛠️ Technologies Used
