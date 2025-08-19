@@ -7,8 +7,7 @@ import FailedTask from "./FailedTask";
 const TaskList = ({ data, onUpdateTask }) => {
   if (!data) return null;
 
-  // Optional: filter state; default shows all. You can wire the stat cards to set this.
-  const [filter, setFilter] = useState("all"); // 'all' | 'new' | 'active' | 'completed' | 'failed'
+  const [filter, setFilter] = useState("all");
 
   const handleAccept = (task) => onUpdateTask(task, "active");
   const handleComplete = (task) => onUpdateTask(task, "completed");
@@ -46,7 +45,6 @@ const TaskList = ({ data, onUpdateTask }) => {
         if (t.completed) return <CompleteTask key={idx} data={t} />;
         if (t.failed) return <FailedTask key={idx} data={t} />;
 
-        // Fallback: treat as new if no status flags
         return <NewTask key={idx} data={t} onAccept={() => handleAccept(t)} />;
       })}
     </div>
