@@ -9,7 +9,6 @@ const NewTask = ({ data, onAccept }) => {
           {data.taskTitle}
         </div>
         <div className="text-[15px] text-slate-300 mt-1.5">{data.taskDescription}</div>
-        {/* If you chose to hide dates on completed/failed only, keeping date here is fine */}
         <div className="text-xs text-slate-400 mt-2">
           Due: {data.taskDate} • {data.category}
         </div>
