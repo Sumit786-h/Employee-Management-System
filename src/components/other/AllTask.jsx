@@ -1,9 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
-/**
- * Small colored pill that reflects the task status.
- */
+
 const StatusPill = ({ status }) => {
   const map = {
     New: "bg-sky-900/60 text-sky-300 border-sky-700",
@@ -22,9 +20,7 @@ const StatusPill = ({ status }) => {
   );
 };
 
-/**
- * A single task row. Option A: dates removed (category only).
- */
+
 const TaskRow = ({ t }) => {
   const status = t.newTask
     ? "New"
@@ -47,21 +43,16 @@ const TaskRow = ({ t }) => {
   );
 };
 
-/**
- * Employee card with:
- * - Top gradient accent
- * - Dark-glass header (name/email)
- * - Slightly tinted body background (below area)
- */
+
 const EmployeeCard = ({ u }) => {
   const tasks = Array.isArray(u.tasks) ? u.tasks : [];
 
   return (
     <div className="rounded-lg border border-slate-700 bg-slate-900/70 overflow-hidden">
-      {/* Top accent bar (teal → indigo → emerald) */}
+      
       <div className="h-[3px] w-full bg-[linear-gradient(90deg,#22d3ee_0%,#818cf8_50%,#34d399_100%)]" />
 
-      {/* Header: darker glass tint */}
+      
       <div className="px-4 py-3 bg-slate-800/60 backdrop-blur-sm border-b border-slate-700/70">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
@@ -78,7 +69,7 @@ const EmployeeCard = ({ u }) => {
         </div>
       </div>
 
-      {/* Body: slightly lighter tint than header for layered depth */}
+      
       <div className="bg-slate-800/40">
         <ul className="px-4">
           {tasks.length > 0 ? (
@@ -92,9 +83,7 @@ const EmployeeCard = ({ u }) => {
   );
 };
 
-/**
- * AllTask root: renders a list of employees with their tasks.
- */
+
 const AllTask = () => {
   const [userData] = useContext(AuthContext);
   const employees = useMemo(() => userData || [], [userData]);
