@@ -49,7 +49,7 @@ const EmployeeDashboard = ({ changeUser, data }) => {
     setUserData(updated);
     localStorage.setItem("employees", JSON.stringify(updated));
 
-    // Keep loggedInUser in sync so reload reflects latest
+
     const current = updated.find((u) => u.id === data.id);
     const logged = JSON.parse(localStorage.getItem("loggedInUser") || "{}");
     if (logged && logged.role === "employee") {
@@ -60,7 +60,6 @@ const EmployeeDashboard = ({ changeUser, data }) => {
     }
   };
 
-  // Always render the freshest version of this user from context
   const me = userData.find((u) => u.id === data?.id) || data;
 
   return (
