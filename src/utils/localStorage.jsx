@@ -1,4 +1,4 @@
-// Seed data used only once on first load
+
 const seedEmployees = [
   {
     id: 1,
