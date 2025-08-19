@@ -31,10 +31,6 @@ All data persists in **localStorage** — no backend required.
 
 ---
 
-## 🚀 Live Demo
-[Click here](https://sumit786-h.github.io/Employee-Management-System/)  
-
----
 
 🔗 Live Demo
 Check it out here: [Click here](https://sumit786-h.github.io/Employee-Management-System/
