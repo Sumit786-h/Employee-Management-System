@@ -36,6 +36,7 @@ All data persists in **localStorage** — no backend required.
 
 ---
 
-## 🔑 Demo Login
-- **Employee** → `e@e.com` / `123`  
+🔗 Live Demo
+Check it out here: [Click here](https://sumit786-h.github.io/Employee-Management-System/
+)
 
